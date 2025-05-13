@@ -28,3 +28,12 @@ def average_heat_level(spicy_foods):
 def create_spicy_food(spicy_foods, new_spicy_food):
     spicy_foods.append(new_spicy_food)
     return spicy_foods
+
+def capital(capitals):
+    result = []
+    for item in capitals:
+        place = item.get('state') or item.get('country')
+        capital_city = item.get('capital')
+        if place and capital_city:
+            result.append(f"The capital of {place} is {capital_city}")
+    return result
